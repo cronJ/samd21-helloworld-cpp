@@ -14,14 +14,16 @@ int main(void)
     SystemInit();
 
 	// Set LED0 to output
-	REG_PORT_DIRSET0 = LED0;
-	
+	//REG_PORT_DIRSET0 = LED0;
+	PORT->Group[0].DIRSET.reg = LED0;
+
 	// Set INEN on PA19
-	PORT->Group[0].PINCFG[19].reg = PORT_PINCFG_INEN;
+	PORT->Group[0].PINCFG[19].bit.INEN = 1;
 		
     while (1) 
     {
-		if ((REG_PORT_IN0 & SW0) != 0)
+		//if ((REG_PORT_IN0 & SW0) != 0)
+		if ((PORT->Group[0].IN.reg & SW0) != 0)
 		{
 			REG_PORT_OUTSET0 = LED0;
 		} 
