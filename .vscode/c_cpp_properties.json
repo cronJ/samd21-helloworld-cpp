@@ -3,18 +3,18 @@
         {
             "name": "ARM",
             "intelliSenseMode": "clang-x64",
-            "compilerPath": "/mnt/d/project/arm/gcc-arm-none-eabi-8-2019-q3-update/bin/arm-none-eabi-gcc",
+            "compilerPath": "/mnt/d/Projekte/toolchain/gcc-arm-none-eabi-8-2019-q3-update/bin/arm-none-eabi-gcc",
             "includePath": [
 				"${workspaceFolder}/**",
-                "/mnt/d/project/arm/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/c++/8.3.1",
-                "/mnt/d/project/arm/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/c++/8.3.1/arm-none-eabi",
-                "/mnt/d/project/arm/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/c++/8.3.1/backward",
-                "/mnt/d/project/arm/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/include",
-                "/mnt/d/project/arm/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/include-fixed",
-                "/mnt/d/project/arm/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include",
-                "/mnt/d/project/arm/xdk-asf-3.46.0/sam0/utils/cmsis/samd21/include",
-                "/mnt/d/project/arm/xdk-asf-3.46.0/thirdparty/CMSIS/Include",
-                "/mnt/d/project/arm/xdk-asf-3.46.0/sam0/utils/cmsis/samd21/source"
+                "/mnt/d/Projekte/toolchain/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/c++/8.3.1",
+                "/mnt/d/Projekte/toolchain/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/c++/8.3.1/arm-none-eabi",
+                "/mnt/d/Projekte/toolchain/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/c++/8.3.1/backward",
+                "/mnt/d/Projekte/toolchain/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/include",
+                "/mnt/d/Projekte/toolchain/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/include-fixed",
+                "/mnt/d/Projekte/toolchain/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include",
+                "/mnt/d/Projekte/toolchain/xdk-asf-3.46.0/sam0/utils/cmsis/samd21/include",
+                "/mnt/d/Projekte/toolchain/xdk-asf-3.46.0/thirdparty/CMSIS/Include",
+                "/mnt/d/Projekte/toolchain/xdk-asf-3.46.0/sam0/utils/cmsis/samd21/source"
             ],
             "defines": [
 				"__SAMD21G18A__"
@@ -22,15 +22,15 @@
             "browse": {
                 "path": [
                     "${workspaceFolder}",
-                    "/mnt/d/project/arm/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/c++/8.3.1",
-                    "/mnt/d/project/arm/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/c++/8.3.1/arm-none-eabi",
-                    "/mnt/d/project/arm/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/c++/8.3.1/backward",
-                    "/mnt/d/project/arm/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/include",
-                    "/mnt/d/project/arm/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/include-fixed",
-                    "/mnt/d/project/arm/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include",
-                    "/mnt/d/project/arm/xdk-asf-3.46.0/sam0/utils/cmsis/samd21/include",
-                    "/mnt/d/project/arm/xdk-asf-3.46.0/thirdparty/CMSIS/Include",
-                    "/mnt/d/project/arm/xdk-asf-3.46.0/sam0/utils/cmsis/samd21/source"
+                    "/mnt/d/Projekte/toolchain/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/c++/8.3.1",
+                    "/mnt/d/Projekte/toolchain/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/c++/8.3.1/arm-none-eabi",
+                    "/mnt/d/Projekte/toolchain/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include/c++/8.3.1/backward",
+                    "/mnt/d/Projekte/toolchain/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/include",
+                    "/mnt/d/Projekte/toolchain/gcc-arm-none-eabi-8-2019-q3-update/lib/gcc/arm-none-eabi/8.3.1/include-fixed",
+                    "/mnt/d/Projekte/toolchain/gcc-arm-none-eabi-8-2019-q3-update/arm-none-eabi/include",
+                    "/mnt/d/Projekte/toolchain/xdk-asf-3.46.0/sam0/utils/cmsis/samd21/include",
+                    "/mnt/d/Projekte/toolchain/xdk-asf-3.46.0/thirdparty/CMSIS/Include",
+                    "/mnt/d/Projekte/toolchain/xdk-asf-3.46.0/sam0/utils/cmsis/samd21/source"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""

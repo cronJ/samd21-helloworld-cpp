@@ -8,11 +8,11 @@ MCU = SAMD21G18A
 
 #	Toolchain Paths (variables defined with := are expanded once, but variables defined with = are expanded whenever they are used)
 #	ARM GCC installation path
-ARM_GCC_PATH := /mnt/d/project/arm/gcc-arm-none-eabi-8-2019-q3-update
+ARM_GCC_PATH := /mnt/d/Projekte/toolchain/gcc-arm-none-eabi-8-2019-q3-update
 #	OpenOCD installation path 
-OPENOCD_PATH := /mnt/d/project/arm/OpenOCD-20190715-0.10.0
+OPENOCD_PATH := /mnt/d/Projekte/toolchain/OpenOCD-20190715-0.10.0
 #	ASF installation path
-ASF_PATH := /mnt/d/project/arm/xdk-asf-3.46.0
+ASF_PATH := /mnt/d/Projekte/toolchain/xdk-asf-3.46.0
 
 BUILD_DIR = build
 OBJECT_DIR = $(BUILD_DIR)/obj

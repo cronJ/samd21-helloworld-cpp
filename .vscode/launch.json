@@ -12,19 +12,19 @@
 			"program": "build/${workspaceFolderBasename}.elf",
 			"args": [],
 			"stopAtEntry": false,
-			"cwd": "/mnt/c/Users/tim/Documents/workspaces/cpp-arm/${workspaceFolderBasename}",
+			"cwd": "/mnt/d/Projekte/toolchain/${workspaceFolderBasename}",
 			"environment": [],
-			"miDebuggerPath": "/mnt/d/arm-dev/gcc-arm-none-eabi-8-2019-q3-update/bin/arm-none-eabi-gdb",
+			"miDebuggerPath": "/mnt/d/Projekte/toolchain/gcc-arm-none-eabi-8-2019-q3-update/bin/arm-none-eabi-gdb",
 			"miDebuggerServerAddress": "localhost:3333",
-			"debugServerPath": "/mnt/d/arm-dev/OpenOCD-20190715-0.10.0/bin/openocd.exe",
+			"debugServerPath": "/mnt/d/Projekte/toolchain/OpenOCD-20190715-0.10.0/bin/openocd.exe",
 			"debugServerArgs": "openocd.cfg",
 			"MIMode": "gdb",
 			"externalConsole": false,
 			"pipeTransport": {
-				"debuggerPath": "/mnt/d/arm-dev/gcc-arm-none-eabi-8-2019-q3-update/bin/arm-none-eabi-gdb",
+				"debuggerPath": "/mnt/d/Projekte/toolchain/gcc-arm-none-eabi-8-2019-q3-update/bin/arm-none-eabi-gdb",
 				"pipeProgram": "${env:windir}\\system32\\bash.exe",
 				"pipeArgs": ["-c"],
-				"pipeCwd": "C:\\Users\\tim\\Documents\\workspaces\\cpp-arm\\${workspaceFolderBasename}"
+				"pipeCwd": "D:\\Projekte\\toolchain\\${workspaceFolderBasename}"
 			},
 			"sourceFileMap": {
                 "/mnt/c": "c:\\",
