@@ -1,7 +1,7 @@
 #ifndef PIN_H_
 #define PIN_H_
 
-#include <saml21.h>
+#include <samd21.h>
 
 class Pin{
 public:

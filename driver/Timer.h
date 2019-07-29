@@ -1,7 +1,7 @@
 #ifndef TIMER_H_
 #define TIMER_H_
 
-#include <saml21.h>
+#include <samd21.h>
 
 typedef enum{
 	OVF = 1 << 0,

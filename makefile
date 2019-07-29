@@ -4,15 +4,15 @@
 #	Default is the name of the current directory
 NAME = $(notdir $(shell pwd))
 
-MCU = SAML21G18B
+MCU = SAMD21G18A
 
 #	Toolchain Paths (variables defined with := are expanded once, but variables defined with = are expanded whenever they are used)
 #	ARM GCC installation path
-ARM_GCC_PATH := /mnt/d/arm-dev/gcc-arm-none-eabi-8-2019-q3-update
+ARM_GCC_PATH := /mnt/d/project/arm/gcc-arm-none-eabi-8-2019-q3-update
 #	OpenOCD installation path 
-OPENOCD_PATH := /mnt/d/arm-dev/OpenOCD-20190715-0.10.0
+OPENOCD_PATH := /mnt/d/project/arm/OpenOCD-20190715-0.10.0
 #	ASF installation path
-ASF_PATH := /mnt/d/arm-dev/xdk-asf-3.45.0
+ASF_PATH := /mnt/d/project/arm/xdk-asf-3.46.0
 
 BUILD_DIR = build
 OBJECT_DIR = $(BUILD_DIR)/obj
@@ -168,16 +168,16 @@ links:
 	@if [ ! -d "xdk-asf" ]; then \
 		mkdir -p xdk-asf; \
 		ln -s $(ASF_PATH)/thirdparty/CMSIS/Include xdk-asf/cmsis; \
-		ln -s $(ASF_PATH)/sam0/utils/cmsis/saml21/include_b xdk-asf/include; \
-		ln -s $(ASF_PATH)/sam0/utils/linker_scripts/saml21/gcc/saml21g18b_flash.ld xdk-asf/flash.ld; \
-		ln -s $(ASF_PATH)/sam0/utils/cmsis/saml21/source/gcc/startup_saml21.c xdk-asf/ ; \
-		ln -s $(ASF_PATH)/sam0/utils/cmsis/saml21/source/system_saml21.c xdk-asf/ ; \
-		ln -s $(ASF_PATH)/sam0/utils/cmsis/saml21/source/system_saml21.h xdk-asf/ ; \
+		ln -s $(ASF_PATH)/sam0/utils/cmsis/samd21/include xdk-asf/include; \
+		ln -s $(ASF_PATH)/sam0/utils/linker_scripts/samd21/gcc/samd21g18a_flash.ld xdk-asf/flash.ld; \
+		ln -s $(ASF_PATH)/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c xdk-asf/ ; \
+		ln -s $(ASF_PATH)/sam0/utils/cmsis/samd21/source/system_samd21.c xdk-asf/ ; \
+		ln -s $(ASF_PATH)/sam0/utils/cmsis/samd21/source/system_samd21.h xdk-asf/ ; \
 		ln -s $(ASF_PATH)/sam0/utils/syscalls/gcc/syscalls.c xdk-asf/;\
 	fi
 
 link_qtouch:
-	@if [ ! -f "" ]; then ln -s $(ASF_PATH)/thirdparty/qtouch/devspecific/sam0/saml/include/touch_api_ptc.h xdk-asf/; fi
+	@if [ ! -f "" ]; then ln -s $(ASF_PATH)/thirdparty/qtouch/devspecific/sam0/samd/include/touch_api_ptc.h xdk-asf/; fi
 
 help:
 	@echo "Supported commands:"

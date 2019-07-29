@@ -1,7 +1,7 @@
 #ifndef SERIAL_H_
 #define SERIAL_H_
 
-#include <saml21.h>
+#include <samd21.h>
 #include <cstring>
 
 class Serial{

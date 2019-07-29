@@ -36,10 +36,10 @@ Serial::Serial(){
 	PORT->Group[1].PINCFG[11].reg = pb11_conf.reg;
 
 	// Config SERCOM4 peripheral clock
-	GCLK_PCHCTRL_Type usart_peripheral_clk_config{.reg = 0};
-	usart_peripheral_clk_config.bit.CHEN = true; // enable the peripheral
-	usart_peripheral_clk_config.bit.GEN = GCLK_PCHCTRL_GEN_GCLK0_Val;	// use gclk0/mclk as source for sercom4
-	GCLK->PCHCTRL[SERCOM4_GCLK_ID_CORE].reg = usart_peripheral_clk_config.reg;
+	GCLK_CLKCTRL_Type usart_peripheral_clk_config{.reg = 0};
+	usart_peripheral_clk_config.bit.CLKEN = true; // enable the peripheral
+	usart_peripheral_clk_config.bit.GEN = GCLK_CLKCTRL_GEN_GCLK0_Val;	// use gclk0/mclk as source for sercom4
+	GCLK->CLKCTRL[SERCOM4_GCLK_ID_CORE].reg = usart_peripheral_clk_config.reg;
 
 //	USART Config:
 

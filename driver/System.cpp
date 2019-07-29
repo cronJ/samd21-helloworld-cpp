@@ -1,5 +1,5 @@
 
-#include <saml21.h>
+#include <samd21.h>
 
 
 /**
@@ -7,10 +7,10 @@
  * gclk_source: GCLK_PCHCTRL_GEN_xx_VAL
  */
 void gclk_enable_clock(uint8_t id, uint8_t gclk_source){
-	GCLK_PCHCTRL_Type clk_config{.reg = 0};
+	GCLK_CLKCTRL_Type clk_config{.reg = 0};
 	clk_config.bit.CHEN = true; // enable the peripheral
 	clk_config.bit.GEN = gclk_source;
-	GCLK->PCHCTRL[id].reg = clk_config.reg;
+	GCLK->CLKCTRL[id].reg = clk_config.reg;
 }
 
 void SystemInit(){
