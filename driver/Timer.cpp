@@ -11,7 +11,7 @@ void timer_init(TcCount8 *tc, timer_prescaler_t prescaler, uint8_t periode){
 	// disable clock before configuring
 	// disabling sets stop flag in status -> needs to be
 	tc->CTRLA.bit.ENABLE = false;
-	while(tc->SYNCBUSY.bit.ENABLE);
+	while(tc->STATUS.bit.SYNCBUSY);
 
 	TC_CTRLA_Type tc_ctrla_config = {.reg = 0};
 	tc_ctrla_config.bit.PRESCALER = static_cast<uint8_t>(prescaler);
@@ -47,7 +47,7 @@ void timer_interruptTriggeredBy(TcCount8 *tc, timer_interrupt_t type){
 void timer_enable(TcCount8 *tc){
 
 	tc->CTRLA.bit.ENABLE = true;
-	while(tc->SYNCBUSY.bit.ENABLE);
+	while(tc->STATUS.bit.SYNCBUSY);
 }
 void timer_start(TcCount8 *tc){
 	tc->CTRLBSET.bit.CMD = TC_CTRLBSET_CMD_RETRIGGER_Val;
@@ -58,7 +58,7 @@ void timer_stop(TcCount8 *tc){
 
 void timer_disable(TcCount8 *tc){
 	tc->CTRLA.bit.ENABLE = false;
-	while(tc->SYNCBUSY.bit.ENABLE);
+	while(tc->STATUS.bit.SYNCBUSY);
 }
 
 void timer_setPeriode(TcCount8 *tc, uint8_t newVal){

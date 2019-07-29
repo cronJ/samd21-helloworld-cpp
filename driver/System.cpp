@@ -4,18 +4,19 @@
 
 /**
  * id: xx_GCLK_ID
- * gclk_source: GCLK_PCHCTRL_GEN_xx_VAL
+ * gclk_source: GCLK_CLKCTRL_GEN_GCLKx_Val
  */
 void gclk_enable_clock(uint8_t id, uint8_t gclk_source){
 	GCLK_CLKCTRL_Type clk_config{.reg = 0};
-	clk_config.bit.CHEN = true; // enable the peripheral
+	clk_config.bit.CLKEN = true; // enable the peripheral
 	clk_config.bit.GEN = gclk_source;
-	GCLK->CLKCTRL[id].reg = clk_config.reg;
+	clk_config.bit.ID = id;
+	GCLK->CLKCTRL.reg = clk_config.reg;
 }
 
 void SystemInit(){
 //	Set PowerLevel to 2 for all peripherals to work
-	PM->PLCFG.bit.PLSEL = 2;
+//	PM->PLCFG.bit.PLSEL = 2;
 //	Set NVM flash wait states to 3
 	NVMCTRL->CTRLB.bit.RWS = 3;
 }

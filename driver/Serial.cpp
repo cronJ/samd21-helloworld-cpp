@@ -39,7 +39,9 @@ Serial::Serial(){
 	GCLK_CLKCTRL_Type usart_peripheral_clk_config{.reg = 0};
 	usart_peripheral_clk_config.bit.CLKEN = true; // enable the peripheral
 	usart_peripheral_clk_config.bit.GEN = GCLK_CLKCTRL_GEN_GCLK0_Val;	// use gclk0/mclk as source for sercom4
-	GCLK->CLKCTRL[SERCOM4_GCLK_ID_CORE].reg = usart_peripheral_clk_config.reg;
+	usart_peripheral_clk_config.bit.ID = SERCOM4_GCLK_ID_CORE;
+	GCLK->CLKCTRL.reg = usart_peripheral_clk_config.reg;
+	
 
 //	USART Config:
 
